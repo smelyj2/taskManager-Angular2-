@@ -1,0 +1,23 @@
+<main>
+	<section class="add-task-section" >
+		<input type="text" #inputtask class="input-task" maxlength="20" placeholder="введите задачу"
+		(keyup.enter)="addTask(inputtask.value, inputtask)">
+		<button class="add-task" (click)="addTask(inputtask.value, inputtask)">Добавить</button>
+	</section>	
+
+	<section class="task-list" *ngIf="tasks.length">
+		<div  class="task-item" *ngFor="let task of tasks" [ngClass]="{completed: task.done}" >
+				<button class="checkbox icon" (click)="toogleTask(task);">
+					<i class="material-icons">{{task.done?'checkbox':'check_box_outline_blank'}}</i>
+				</button>
+
+				<span class="title">{{task.title}}</span>
+
+				<div class="delete-section" (click)="deleteTask(task)">
+						<button class="delete icon">
+							<i class="material-icons">delete</i>
+						</button>
+				</div>
+		</div>
+	</section>
+</main>

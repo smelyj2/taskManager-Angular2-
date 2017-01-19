@@ -1,0 +1,30 @@
+	<div class="manager-frame" [ngClass]="{invisible:visibility}" >
+			<div class="frame__header" >
+			  <span >Task Manager</span>
+			  	<div class="wrapper-buttons">
+					<ul class="head-buttons">
+						<li class="turn-li">  
+							<button>
+								<img src="./app/components/taskManager/images/turn.png" > 
+							</button>
+						</li>
+						<li class="expand-li">
+							<button>
+								<img src="./app/components/taskManager/images/expand.png" > 
+							</button>
+						</li>
+						<li class="close-li" (click)="closeManager(true)">
+							<button>
+								<img src="./app/components/taskManager/images/close.png" > 
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="frame__content">
+				<manager-content></manager-content>
+			</div>
+	</div>
+
+
+	

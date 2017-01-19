@@ -1,0 +1,24 @@
+<div class="main">
+	<div class="start-underscore">
+			<div class="start-div">
+								
+				<div class="dropup">
+					 <button class="btn btn-primary dropdown-toggle start-button" type="button" data-toggle="dropdown">Start
+					</button>
+					<ul class="dropdown-menu">
+					 <li class="my-bold " (click)="visibilityTaskManager()" id="manager">
+						 <a href="#0">Task Manager</a>
+					 </li>
+					 <li class="disabled"><a href="#0">empty</a></li>
+					 <li class="disabled"><a href="#0">empty</a></li>
+					 <li class="disabled"><a href="#0">empty</a></li>
+					 <li class="disabled"><a href="#0">empty</a></li>
+					</ul>
+				</div>
+
+			</div>
+			<div class="time">{{curTime | async | date:'mediumTime'}}</div> 
+	</div>
+	<task-manager [visibility]="visibilVal" (onCloseManager)="onCloseManager($event)" ></task-manager>
+</div>
+
